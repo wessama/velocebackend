@@ -22,6 +22,13 @@ class Booking extends Model
         'deleted_at',
     ];
 
+    public const STATUS_SELECT = [
+        'PENDING'          => 'Pending',
+        'COMPLETED'        => 'Completed',
+        'CANCELLED'        => 'Cancelled',
+        'REFUND_REQUESTED' => 'Refund Requested',
+    ];
+
     protected $fillable = [
         'user_id',
         'asset_id',
@@ -31,6 +38,7 @@ class Booking extends Model
         'dropoff_location',
         'canceled',
         'refunded',
+        'status',
         'created_at',
         'updated_at',
         'deleted_at',

@@ -87,6 +87,14 @@
                             <input type="checkbox" disabled="disabled" {{ $booking->refunded ? 'checked' : '' }}>
                         </td>
                     </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.booking.fields.status') }}
+                        </th>
+                        <td>
+                            {{ App\Models\Booking::STATUS_SELECT[$booking->status] ?? '' }}
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <div class="form-group">

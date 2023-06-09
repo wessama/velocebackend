@@ -16,6 +16,7 @@ class CreateBookingsTable extends Migration
             $table->string('dropoff_location')->nullable();
             $table->boolean('canceled')->default(0)->nullable();
             $table->boolean('refunded')->default(0)->nullable();
+            $table->string('status')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

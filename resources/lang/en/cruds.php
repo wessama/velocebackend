@@ -207,6 +207,8 @@ return [
             'canceled_helper'         => ' ',
             'refunded'                => 'Refunded',
             'refunded_helper'         => ' ',
+            'status'                  => 'Status',
+            'status_helper'           => ' ',
         ],
     ],
     'transaction' => [

@@ -28,13 +28,7 @@
                             {{ trans('cruds.booking.fields.user') }}
                         </th>
                         <th>
-                            {{ trans('cruds.user.fields.email_verified_at') }}
-                        </th>
-                        <th>
                             {{ trans('cruds.booking.fields.asset') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.asset.fields.serial_number') }}
                         </th>
                         <th>
                             {{ trans('cruds.booking.fields.pickup_date') }}
@@ -55,6 +49,9 @@
                             {{ trans('cruds.booking.fields.refunded') }}
                         </th>
                         <th>
+                            {{ trans('cruds.booking.fields.status') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -72,13 +69,7 @@
                                 {{ $booking->user->name ?? '' }}
                             </td>
                             <td>
-                                {{ $booking->user->email_verified_at ?? '' }}
-                            </td>
-                            <td>
                                 {{ $booking->asset->name ?? '' }}
-                            </td>
-                            <td>
-                                {{ $booking->asset->serial_number ?? '' }}
                             </td>
                             <td>
                                 {{ $booking->pickup_date ?? '' }}
@@ -99,6 +90,9 @@
                             <td>
                                 <span style="display:none">{{ $booking->refunded ?? '' }}</span>
                                 <input type="checkbox" disabled="disabled" {{ $booking->refunded ? 'checked' : '' }}>
+                            </td>
+                            <td>
+                                {{ App\Models\Booking::STATUS_SELECT[$booking->status] ?? '' }}
                             </td>
                             <td>
                                 @can('booking_show')
