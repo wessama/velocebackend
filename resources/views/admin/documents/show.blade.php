@@ -33,18 +33,10 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.document.fields.comments') }}
+                            {{ trans('cruds.document.fields.document_type') }}
                         </th>
                         <td>
-                            {{ $document->comments }}
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            {{ trans('cruds.document.fields.verified') }}
-                        </th>
-                        <td>
-                            <input type="checkbox" disabled="disabled" {{ $document->verified ? 'checked' : '' }}>
+                            {{ $document->document_type->type ?? '' }}
                         </td>
                     </tr>
                     <tr>
@@ -61,10 +53,18 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.document.fields.document_type') }}
+                            {{ trans('cruds.document.fields.verified') }}
                         </th>
                         <td>
-                            {{ $document->document_type->type ?? '' }}
+                            <input type="checkbox" disabled="disabled" {{ $document->verified ? 'checked' : '' }}>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.document.fields.comments') }}
+                        </th>
+                        <td>
+                            {{ $document->comments }}
                         </td>
                     </tr>
                 </tbody>

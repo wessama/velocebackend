@@ -25,14 +25,29 @@
                 <span class="help-block">{{ trans('cruds.document.fields.user_helper') }}</span>
             </div>
             <div class="form-group">
-                <label for="comments">{{ trans('cruds.document.fields.comments') }}</label>
-                <textarea class="form-control {{ $errors->has('comments') ? 'is-invalid' : '' }}" name="comments" id="comments">{{ old('comments', $document->comments) }}</textarea>
-                @if($errors->has('comments'))
+                <label class="required" for="document_type_id">{{ trans('cruds.document.fields.document_type') }}</label>
+                <select class="form-control select2 {{ $errors->has('document_type') ? 'is-invalid' : '' }}" name="document_type_id" id="document_type_id" required>
+                    @foreach($document_types as $id => $entry)
+                        <option value="{{ $id }}" {{ (old('document_type_id') ? old('document_type_id') : $document->document_type->id ?? '') == $id ? 'selected' : '' }}>{{ $entry }}</option>
+                    @endforeach
+                </select>
+                @if($errors->has('document_type'))
                     <div class="invalid-feedback">
-                        {{ $errors->first('comments') }}
+                        {{ $errors->first('document_type') }}
                     </div>
                 @endif
-                <span class="help-block">{{ trans('cruds.document.fields.comments_helper') }}</span>
+                <span class="help-block">{{ trans('cruds.document.fields.document_type_helper') }}</span>
+            </div>
+            <div class="form-group">
+                <label for="document">{{ trans('cruds.document.fields.document') }}</label>
+                <div class="needsclick dropzone {{ $errors->has('document') ? 'is-invalid' : '' }}" id="document-dropzone">
+                </div>
+                @if($errors->has('document'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('document') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.document.fields.document_helper') }}</span>
             </div>
             <div class="form-group">
                 <div class="form-check {{ $errors->has('verified') ? 'is-invalid' : '' }}">
@@ -48,29 +63,14 @@
                 <span class="help-block">{{ trans('cruds.document.fields.verified_helper') }}</span>
             </div>
             <div class="form-group">
-                <label for="document">{{ trans('cruds.document.fields.document') }}</label>
-                <div class="needsclick dropzone {{ $errors->has('document') ? 'is-invalid' : '' }}" id="document-dropzone">
-                </div>
-                @if($errors->has('document'))
+                <label for="comments">{{ trans('cruds.document.fields.comments') }}</label>
+                <textarea class="form-control {{ $errors->has('comments') ? 'is-invalid' : '' }}" name="comments" id="comments">{{ old('comments', $document->comments) }}</textarea>
+                @if($errors->has('comments'))
                     <div class="invalid-feedback">
-                        {{ $errors->first('document') }}
+                        {{ $errors->first('comments') }}
                     </div>
                 @endif
-                <span class="help-block">{{ trans('cruds.document.fields.document_helper') }}</span>
-            </div>
-            <div class="form-group">
-                <label class="required" for="document_type_id">{{ trans('cruds.document.fields.document_type') }}</label>
-                <select class="form-control select2 {{ $errors->has('document_type') ? 'is-invalid' : '' }}" name="document_type_id" id="document_type_id" required>
-                    @foreach($document_types as $id => $entry)
-                        <option value="{{ $id }}" {{ (old('document_type_id') ? old('document_type_id') : $document->document_type->id ?? '') == $id ? 'selected' : '' }}>{{ $entry }}</option>
-                    @endforeach
-                </select>
-                @if($errors->has('document_type'))
-                    <div class="invalid-feedback">
-                        {{ $errors->first('document_type') }}
-                    </div>
-                @endif
-                <span class="help-block">{{ trans('cruds.document.fields.document_type_helper') }}</span>
+                <span class="help-block">{{ trans('cruds.document.fields.comments_helper') }}</span>
             </div>
             <div class="form-group">
                 <button class="btn btn-danger" type="submit">

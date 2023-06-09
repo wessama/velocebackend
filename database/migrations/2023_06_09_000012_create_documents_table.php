@@ -10,8 +10,8 @@ class CreateDocumentsTable extends Migration
     {
         Schema::create('documents', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->longText('comments')->nullable();
             $table->boolean('verified')->default(0)->nullable();
+            $table->longText('comments')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

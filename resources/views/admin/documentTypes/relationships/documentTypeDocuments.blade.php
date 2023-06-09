@@ -28,16 +28,16 @@
                             {{ trans('cruds.document.fields.user') }}
                         </th>
                         <th>
-                            {{ trans('cruds.document.fields.comments') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.document.fields.verified') }}
+                            {{ trans('cruds.document.fields.document_type') }}
                         </th>
                         <th>
                             {{ trans('cruds.document.fields.document') }}
                         </th>
                         <th>
-                            {{ trans('cruds.document.fields.document_type') }}
+                            {{ trans('cruds.document.fields.verified') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.document.fields.comments') }}
                         </th>
                         <th>
                             &nbsp;
@@ -57,11 +57,7 @@
                                 {{ $document->user->name ?? '' }}
                             </td>
                             <td>
-                                {{ $document->comments ?? '' }}
-                            </td>
-                            <td>
-                                <span style="display:none">{{ $document->verified ?? '' }}</span>
-                                <input type="checkbox" disabled="disabled" {{ $document->verified ? 'checked' : '' }}>
+                                {{ $document->document_type->type ?? '' }}
                             </td>
                             <td>
                                 @if($document->document)
@@ -71,7 +67,11 @@
                                 @endif
                             </td>
                             <td>
-                                {{ $document->document_type->type ?? '' }}
+                                <span style="display:none">{{ $document->verified ?? '' }}</span>
+                                <input type="checkbox" disabled="disabled" {{ $document->verified ? 'checked' : '' }}>
+                            </td>
+                            <td>
+                                {{ $document->comments ?? '' }}
                             </td>
                             <td>
                                 @can('document_show')
