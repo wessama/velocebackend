@@ -1,15 +1,15 @@
 @extends('layouts.frontend.app')
 
 @section('content')
-    @inject('agent', 'Jenssegers\Agent\Agent')
-
     @if($agent->isMobile())
         @include('partials.frontend.car-search')
         @include('partials.frontend.slider')
         @include('partials.frontend.categories')
+        @include('partials.frontend.cars')
     @else
         @include('partials.frontend.slider')
         @include('partials.frontend.car-search')
         @include('partials.frontend.categories')
+        @include('partials.frontend.cars')
     @endif
 @endsection
