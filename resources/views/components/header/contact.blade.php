@@ -6,8 +6,9 @@
         </div>
         <div class="rn-info">
             <ul>
-                <li>(954)-944-1250</li>
-                <li>(954)-944-1251</li>
+                <li>&nbsp;</li>
+                <li>(971)-944-1251</li>
+                <li>&nbsp;</li>
             </ul>
         </div>
     </div>
@@ -17,8 +18,9 @@
         </div>
         <div class="rn-info">
             <ul>
-                <li>support@example.coms</li>
-                <li>sale@example.com</li>
+                <li>&nbsp;</li>
+                <li>info@velocerental.ae</li>
+                <li>&nbsp;</li>
             </ul>
         </div>
     </div>
@@ -28,8 +30,8 @@
         </div>
         <div class="rn-info">
             <ul>
-                <li>1425 Pointe Lane, Miami</li>
-                <li>Florida – 33169, USA</li>
+                <li>Al Wasl Compound - Street 69</li>
+                <li>Al Quoz Industrial Area 3 - Dubai</li>
             </ul>
         </div>
     </div>
