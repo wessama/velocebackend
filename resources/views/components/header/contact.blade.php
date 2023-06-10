@@ -32,6 +32,7 @@
             <ul>
                 <li>Al Wasl Compound - Street 69</li>
                 <li>Al Quoz Industrial Area 3 - Dubai</li>
+                <li>United Arab Emirates</li>
             </ul>
         </div>
     </div>
