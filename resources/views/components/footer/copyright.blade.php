@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6">
-                <p>Copyright &copy; RentNow 2018. All rights reserved.</p>
+                <p>Copyright &copy; Veloce Rentals {{ \Carbon\Carbon::now()->year }}. All rights reserved.</p>
             </div>
             <div class="col-md-6 text-right">
                 <span class="rn-pyament-methods">

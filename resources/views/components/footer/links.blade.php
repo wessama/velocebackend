@@ -6,41 +6,23 @@
             <div class="col-6">
                 <ul>
                     <li>
-                        <a href="#">About Us</a>
+                        <a href="#">About</a>
                     </li>
                     <li>
-                        <a href="#">Contact Us</a>
+                        <a href="#">Contact</a>
                     </li>
                     <li>
-                        <a href="#">Support</a>
-                    </li>
-                    <li>
-                        <a href="#">View Booking</a>
-                    </li>
-                    <li>
-                        <a href="#">Affiliate Programme</a>
-                    </li>
-                    <li>
-                        <a href="#">Marketplace</a>
+                        <a href="#">Available Cars</a>
                     </li>
                 </ul>
             </div>
             <div class="col-6">
                 <ul>
                     <li>
-                        <a href="#">Site Map</a>
+                        <a href="#">FAQ</a>
                     </li>
                     <li>
-                        <a href="#">Careers</a>
-                    </li>
-                    <li>
-                        <a href="#">Press</a>
-                    </li>
-                    <li>
-                        <a href="#">Get a Receipt</a>
-                    </li>
-                    <li>
-                        <a href="#">Community</a>
+                        <a href="#">Support</a>
                     </li>
                 </ul>
             </div>

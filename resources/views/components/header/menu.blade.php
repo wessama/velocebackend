@@ -2,13 +2,13 @@
 <div class="rn-menubar">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-4">
+            <div class="col-12 col-md-4">
                 <!-- Logo-->
-                <a class="brand-name" href="index.html">
-                    <img class="img-fluid" src="{{ asset('images/logo.svg') }}" alt="Logo">
+                <a class="brand-name" href="{{ route('home') }}">
+                    <img class="img-fluid" src="{{ asset('images/logo.png') }}" alt="Logo">
                 </a>
             </div>
-            <div class="col-8">
+            <div class="col-12 col-md-8">
                 <nav class="rn-navbar-container">
 
                     <!-- Navbar Toggle Button for Only Tablet and Phone-->

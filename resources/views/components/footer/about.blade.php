@@ -2,8 +2,8 @@
 <section class="rn-widget">
     <h2 class="rn-widget-title">About Us</h2>
     <div class="rn-widget-content">
-        <a class="brand-name" href="index.html">
-            <img src="{{ asset('images/logo.svg') }}" alt="Logo">
+        <a class="brand-name" href="{{ route('home') }}">
+            <img class="img-fluid" src="{{ asset('images/logo.png') }}" alt="Logo">
         </a>
         <p>Sed sit amet ligula ac nulla finibus euismod nec nec diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent semper, risus eget ornare maximus, ipsum ante semper.</p>
         <ul class="rn-widget-social">
