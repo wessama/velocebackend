@@ -31,8 +31,10 @@ class Asset extends Model implements HasMedia
         'make',
         'model',
         'year',
+        'color',
         'name',
         'notes',
+        'short_description',
         'assigned_to_id',
         'price',
         'created_at',
@@ -60,6 +62,11 @@ class Asset extends Model implements HasMedia
     public function assetBookings()
     {
         return $this->hasMany(Booking::class, 'asset_id', 'id');
+    }
+
+    public function assetReviews()
+    {
+        return $this->hasMany(Review::class, 'asset_id', 'id');
     }
 
     public function category()

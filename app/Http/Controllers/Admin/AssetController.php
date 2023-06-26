@@ -97,7 +97,7 @@ class AssetController extends Controller
     {
         abort_if(Gate::denies('asset_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $asset->load('category', 'assigned_to', 'amenities', 'assetBookings');
+        $asset->load('category', 'assigned_to', 'amenities', 'assetBookings', 'assetReviews');
 
         return view('admin.assets.show', compact('asset'));
     }

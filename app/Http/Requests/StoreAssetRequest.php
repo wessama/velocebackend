@@ -33,6 +33,10 @@ class StoreAssetRequest extends FormRequest
                 'string',
                 'nullable',
             ],
+            'color' => [
+                'string',
+                'nullable',
+            ],
             'name' => [
                 'string',
                 'required',
