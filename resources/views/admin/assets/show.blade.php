@@ -57,6 +57,14 @@
                     </tr>
                     <tr>
                         <th>
+                            {{ trans('cruds.asset.fields.color') }}
+                        </th>
+                        <td>
+                            {{ $asset->color }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
                             {{ trans('cruds.asset.fields.name') }}
                         </th>
                         <td>
@@ -81,6 +89,14 @@
                         </th>
                         <td>
                             {!! $asset->notes !!}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.asset.fields.short_description') }}
+                        </th>
+                        <td>
+                            {!! $asset->short_description !!}
                         </td>
                     </tr>
                     <tr>
@@ -130,10 +146,18 @@
                 {{ trans('cruds.booking.title') }}
             </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#asset_reviews" role="tab" data-toggle="tab">
+                {{ trans('cruds.review.title') }}
+            </a>
+        </li>
     </ul>
     <div class="tab-content">
         <div class="tab-pane" role="tabpanel" id="asset_bookings">
             @includeIf('admin.assets.relationships.assetBookings', ['bookings' => $asset->assetBookings])
+        </div>
+        <div class="tab-pane" role="tabpanel" id="asset_reviews">
+            @includeIf('admin.assets.relationships.assetReviews', ['reviews' => $asset->assetReviews])
         </div>
     </div>
 </div>

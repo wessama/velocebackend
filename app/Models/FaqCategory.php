@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class AssetCategory extends Model
+class FaqCategory extends Model
 {
     use SoftDeletes, HasFactory;
 
-    public $table = 'asset_categories';
+    public $table = 'faq_categories';
 
     protected $dates = [
         'created_at',
@@ -20,8 +20,7 @@ class AssetCategory extends Model
     ];
 
     protected $fillable = [
-        'name',
-        'icon',
+        'category',
         'created_at',
         'updated_at',
         'deleted_at',

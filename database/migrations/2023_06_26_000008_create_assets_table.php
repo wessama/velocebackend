@@ -13,8 +13,10 @@ class CreateAssetsTable extends Migration
             $table->string('make')->nullable();
             $table->string('model')->nullable();
             $table->string('year')->nullable();
+            $table->string('color')->nullable();
             $table->string('name')->nullable();
             $table->longText('notes')->nullable();
+            $table->longText('short_description')->nullable();
             $table->decimal('price', 15, 2)->nullable();
             $table->timestamps();
             $table->softDeletes();

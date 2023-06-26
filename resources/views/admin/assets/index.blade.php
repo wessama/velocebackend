@@ -38,6 +38,9 @@
                             {{ trans('cruds.asset.fields.year') }}
                         </th>
                         <th>
+                            {{ trans('cruds.asset.fields.color') }}
+                        </th>
+                        <th>
                             {{ trans('cruds.asset.fields.name') }}
                         </th>
                         <th>
@@ -77,6 +80,9 @@
                             </td>
                             <td>
                                 {{ $asset->year ?? '' }}
+                            </td>
+                            <td>
+                                {{ $asset->color ?? '' }}
                             </td>
                             <td>
                                 {{ $asset->name ?? '' }}

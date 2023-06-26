@@ -55,6 +55,16 @@
                 <span class="help-block">{{ trans('cruds.asset.fields.year_helper') }}</span>
             </div>
             <div class="form-group">
+                <label for="color">{{ trans('cruds.asset.fields.color') }}</label>
+                <input class="form-control {{ $errors->has('color') ? 'is-invalid' : '' }}" type="text" name="color" id="color" value="{{ old('color', $asset->color) }}">
+                @if($errors->has('color'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('color') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.asset.fields.color_helper') }}</span>
+            </div>
+            <div class="form-group">
                 <label class="required" for="name">{{ trans('cruds.asset.fields.name') }}</label>
                 <input class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" type="text" name="name" id="name" value="{{ old('name', $asset->name) }}" required>
                 @if($errors->has('name'))
@@ -84,6 +94,16 @@
                     </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.asset.fields.notes_helper') }}</span>
+            </div>
+            <div class="form-group">
+                <label for="short_description">{{ trans('cruds.asset.fields.short_description') }}</label>
+                <textarea class="form-control ckeditor {{ $errors->has('short_description') ? 'is-invalid' : '' }}" name="short_description" id="short_description">{!! old('short_description', $asset->short_description) !!}</textarea>
+                @if($errors->has('short_description'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('short_description') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.asset.fields.short_description_helper') }}</span>
             </div>
             <div class="form-group">
                 <label for="assigned_to_id">{{ trans('cruds.asset.fields.assigned_to') }}</label>

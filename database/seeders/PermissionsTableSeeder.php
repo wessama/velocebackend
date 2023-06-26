@@ -268,6 +268,70 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 65,
+                'title' => 'faq_management_access',
+            ],
+            [
+                'id'    => 66,
+                'title' => 'faq_category_create',
+            ],
+            [
+                'id'    => 67,
+                'title' => 'faq_category_edit',
+            ],
+            [
+                'id'    => 68,
+                'title' => 'faq_category_show',
+            ],
+            [
+                'id'    => 69,
+                'title' => 'faq_category_delete',
+            ],
+            [
+                'id'    => 70,
+                'title' => 'faq_category_access',
+            ],
+            [
+                'id'    => 71,
+                'title' => 'faq_question_create',
+            ],
+            [
+                'id'    => 72,
+                'title' => 'faq_question_edit',
+            ],
+            [
+                'id'    => 73,
+                'title' => 'faq_question_show',
+            ],
+            [
+                'id'    => 74,
+                'title' => 'faq_question_delete',
+            ],
+            [
+                'id'    => 75,
+                'title' => 'faq_question_access',
+            ],
+            [
+                'id'    => 76,
+                'title' => 'review_create',
+            ],
+            [
+                'id'    => 77,
+                'title' => 'review_edit',
+            ],
+            [
+                'id'    => 78,
+                'title' => 'review_show',
+            ],
+            [
+                'id'    => 79,
+                'title' => 'review_delete',
+            ],
+            [
+                'id'    => 80,
+                'title' => 'review_access',
+            ],
+            [
+                'id'    => 81,
                 'title' => 'profile_password_edit',
             ],
         ];

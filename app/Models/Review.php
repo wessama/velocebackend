@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class AssetCategory extends Model
+class Review extends Model
 {
     use SoftDeletes, HasFactory;
 
-    public $table = 'asset_categories';
+    public $table = 'reviews';
 
     protected $dates = [
         'created_at',
@@ -20,8 +20,11 @@ class AssetCategory extends Model
     ];
 
     protected $fillable = [
+        'asset_id',
         'name',
-        'icon',
+        'email',
+        'rating',
+        'rating_breakdown',
         'created_at',
         'updated_at',
         'deleted_at',
@@ -30,5 +33,10 @@ class AssetCategory extends Model
     protected function serializeDate(DateTimeInterface $date)
     {
         return $date->format('Y-m-d H:i:s');
+    }
+
+    public function asset()
+    {
+        return $this->belongsTo(Asset::class, 'asset_id');
     }
 }

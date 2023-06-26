@@ -1,31 +1,18 @@
 <?php
 
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Route;
-
-Route::get('/', 'HomeController@index')->name('home');
-
-Route::group(['as' => 'frontend.'], function() {
-    Route::get('cars/search', 'HomeController@search')->name('cars.search');
-
-    Route::post('cars/filter', 'HomeController@filter')->name('cars.filter');
-
-    Route::get('cars/category/{assetCategory?}', 'HomeController@cars')->name('cars');
-});
-
+Route::redirect('/', '/login');
 Route::get('/home', function () {
     if (session('status')) {
         return redirect()->route('admin.home')->with('status', session('status'));
     }
 
-    return redirect()->route('home');
+    return redirect()->route('admin.home');
 });
 
 Auth::routes(['register' => false]);
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
     Route::get('/', 'HomeController@index')->name('home');
-
     // Permissions
     Route::delete('permissions/destroy', 'PermissionsController@massDestroy')->name('permissions.massDestroy');
     Route::resource('permissions', 'PermissionsController');
@@ -80,6 +67,18 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     // Amenity
     Route::delete('amenities/destroy', 'AmenityController@massDestroy')->name('amenities.massDestroy');
     Route::resource('amenities', 'AmenityController');
+
+    // Faq Category
+    Route::delete('faq-categories/destroy', 'FaqCategoryController@massDestroy')->name('faq-categories.massDestroy');
+    Route::resource('faq-categories', 'FaqCategoryController');
+
+    // Faq Question
+    Route::delete('faq-questions/destroy', 'FaqQuestionController@massDestroy')->name('faq-questions.massDestroy');
+    Route::resource('faq-questions', 'FaqQuestionController');
+
+    // Review
+    Route::delete('reviews/destroy', 'ReviewController@massDestroy')->name('reviews.massDestroy');
+    Route::resource('reviews', 'ReviewController');
 });
 Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 'middleware' => ['auth']], function () {
     // Change password
