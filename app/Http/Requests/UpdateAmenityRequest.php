@@ -21,10 +21,6 @@ class UpdateAmenityRequest extends FormRequest
                 'string',
                 'nullable',
             ],
-            'value' => [
-                'string',
-                'nullable',
-            ],
             'icon' => [
                 'string',
                 'nullable',

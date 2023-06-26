@@ -20,7 +20,6 @@ class AssetsHistory extends Model
     protected $fillable = [
         'asset_id',
         'status_id',
-        'location_id',
         'assigned_user_id',
         'mileage',
         'fuel_indicator',
@@ -41,11 +40,6 @@ class AssetsHistory extends Model
     public function status()
     {
         return $this->belongsTo(AssetStatus::class, 'status_id');
-    }
-
-    public function location()
-    {
-        return $this->belongsTo(AssetLocation::class, 'location_id');
     }
 
     public function assigned_user()

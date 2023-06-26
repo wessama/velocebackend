@@ -13,8 +13,6 @@ class AddRelationshipFieldsToAssetsHistoriesTable extends Migration
             $table->foreign('asset_id', 'asset_fk_8603370')->references('id')->on('assets');
             $table->unsignedBigInteger('status_id')->nullable();
             $table->foreign('status_id', 'status_fk_8603371')->references('id')->on('asset_statuses');
-            $table->unsignedBigInteger('location_id')->nullable();
-            $table->foreign('location_id', 'location_fk_8603372')->references('id')->on('asset_locations');
             $table->unsignedBigInteger('assigned_user_id')->nullable();
             $table->foreign('assigned_user_id', 'assigned_user_fk_8603373')->references('id')->on('users');
         });

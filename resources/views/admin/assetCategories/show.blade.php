@@ -31,6 +31,14 @@
                             {{ $assetCategory->name }}
                         </td>
                     </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.assetCategory.fields.icon') }}
+                        </th>
+                        <td>
+                            {{ $assetCategory->icon }}
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <div class="form-group">

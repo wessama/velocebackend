@@ -33,14 +33,6 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.amenity.fields.value') }}
-                        </th>
-                        <td>
-                            {{ $amenity->value }}
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
                             {{ trans('cruds.amenity.fields.icon') }}
                         </th>
                         <td>

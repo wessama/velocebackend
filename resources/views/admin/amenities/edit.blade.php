@@ -21,16 +21,6 @@
                 <span class="help-block">{{ trans('cruds.amenity.fields.name_helper') }}</span>
             </div>
             <div class="form-group">
-                <label for="value">{{ trans('cruds.amenity.fields.value') }}</label>
-                <input class="form-control {{ $errors->has('value') ? 'is-invalid' : '' }}" type="text" name="value" id="value" value="{{ old('value', $amenity->value) }}">
-                @if($errors->has('value'))
-                    <div class="invalid-feedback">
-                        {{ $errors->first('value') }}
-                    </div>
-                @endif
-                <span class="help-block">{{ trans('cruds.amenity.fields.value_helper') }}</span>
-            </div>
-            <div class="form-group">
                 <label for="icon">{{ trans('cruds.amenity.fields.icon') }}</label>
                 <input class="form-control {{ $errors->has('icon') ? 'is-invalid' : '' }}" type="text" name="icon" id="icon" value="{{ old('icon', $amenity->icon) }}">
                 @if($errors->has('icon'))

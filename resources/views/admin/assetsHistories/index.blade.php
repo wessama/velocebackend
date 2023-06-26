@@ -24,9 +24,6 @@
                             {{ trans('cruds.assetsHistory.fields.status') }}
                         </th>
                         <th>
-                            {{ trans('cruds.assetsHistory.fields.location') }}
-                        </th>
-                        <th>
                             {{ trans('cruds.assetsHistory.fields.assigned_user') }}
                         </th>
                         <th>
@@ -57,9 +54,6 @@
                             </td>
                             <td>
                                 {{ $assetsHistory->status->name ?? '' }}
-                            </td>
-                            <td>
-                                {{ $assetsHistory->location->name ?? '' }}
                             </td>
                             <td>
                                 {{ $assetsHistory->assigned_user->name ?? '' }}
