@@ -5,8 +5,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index')->name('home');
 
-Route::group(['prefix' => 'home', 'as' => 'frontend.'], function() {
-    Route::get('cars/{category}', 'HomeController@search')->name('cars');
+Route::group(['as' => 'frontend.'], function() {
+    Route::get('cars/{assetCategory?}', 'HomeController@cars')->name('cars');
 
 });
 

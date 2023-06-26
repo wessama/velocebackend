@@ -1,24 +1,25 @@
 <!-- Cars-->
+@if ($assets->isNotEmpty())
 <section class="rn-section rn-car-list" id="cars">
     <div class="container">
         <div class="row">
-            @each('components.partials.car.index', $cars, 'car')
+            @each('components.partials.car.index', $assets, 'asset')
         </div>
         <div class="row">
             <div class="col-lg-12">
                 <!-- Cars Pagination-->
                 <nav class="rn-pagination rn-pagination-center">
                     <ul>
-                        @if (! $cars->onFirstPage())
+                        @if (! $assets->onFirstPage())
                             <li>
-                                <a href="{{ $cars->previousPageUrl() }}#cars">
+                                <a href="{{ $assets->previousPageUrl() }}#cars">
                                     <i class="fas fa-angle-left"></i>
                                 </a>
                             </li>
                         @endif
 
-                        @foreach ($cars->getUrlRange(1, $cars->lastPage()) as $page => $url)
-                            @if ($page == $cars->currentPage())
+                        @foreach ($assets->getUrlRange(1, $assets->lastPage()) as $page => $url)
+                            @if ($page == $assets->currentPage())
                                 <li>
                                     <a class="rn-active" href="{{ $url }}#cars">{{ $page }}</a>
                                 </li>
@@ -29,9 +30,9 @@
                             @endif
                         @endforeach
 
-                        @if ($cars->hasMorePages())
+                        @if ($assets->hasMorePages())
                             <li>
-                                <a href="{{ $cars->nextPageUrl() }}#cars">
+                                <a href="{{ $assets->nextPageUrl() }}#cars">
                                     <i class="fas fa-angle-right"></i>
                                 </a>
                             </li>
@@ -44,3 +45,6 @@
     </div>
 </section>
 <!-- End Cars-->
+@else
+    <x-partials.no-items-found />
+@endif

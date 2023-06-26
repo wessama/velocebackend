@@ -25,6 +25,10 @@
     <x-header/>
     <!-- End Header-->
 
+    <!-- Page Title-->
+    @yield('title')
+
+    <!-- Content-->
     @yield('content')
 
     <!-- Site Footer-->

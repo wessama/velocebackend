@@ -12,72 +12,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-2 col-6 col-md-4">
-                <!-- Car Category-->
-                <div class="rn-car-type">
-                    <a  >
-                        <span class="rn-car-type-icon">
-                            <i class="rni-car-type-sedan"></i>
-                        </span>
-                        <span class="rn-car-type-title">Sedan</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-2 col-6 col-md-4">
-                <!-- Car Category-->
-                <div class="rn-car-type">
-                    <a  >
-                        <span class="rn-car-type-icon">
-                            <i class="rni-car-type-roadster"></i>
-                        </span>
-                        <span class="rn-car-type-title">Roadster</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-2 col-6 col-md-4">
-                <!-- Car Category-->
-                <div class="rn-car-type">
-                    <a  >
-                        <span class="rn-car-type-icon">
-                            <i class="rni-car-type-coupe"></i>
-                        </span>
-                        <span class="rn-car-type-title">Coupe</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-2 col-6 col-md-4">
-                <!-- Car Category-->
-                <div class="rn-car-type">
-                    <a  >
-                        <span class="rn-car-type-icon">
-                            <i class="rni-car-type-minivan"></i>
-                        </span>
-                        <span class="rn-car-type-title">Minivan</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-2 col-6 col-md-4">
-                <!-- Car Category-->
-                <div class="rn-car-type">
-                    <a  >
-                        <span class="rn-car-type-icon">
-                            <i class="rni-car-type-statio-wagon"></i>
-                        </span>
-                        <span class="rn-car-type-title">Station Wagon</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-2 col-6 col-md-4">
-                <!-- Car Category-->
-                <div class="rn-car-type">
-                    <a  >
-                        <span class="rn-car-type-icon">
-                            <i class="rni-car-type-limousine"></i>
-                        </span>
-                        <span class="rn-car-type-title">Limousine</span>
-                    </a>
-                </div>
-            </div>
+            @each('components.partials.category.index', $assetCategories, 'assetCategory')
         </div>
     </div>
 </section>

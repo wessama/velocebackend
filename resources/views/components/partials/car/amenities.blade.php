@@ -1,5 +1,5 @@
 <ul>
     @foreach($amenities as $amenity)
-        <li>{{ $amenity }}</li>
+        <li>{{ $amenity['name'] }}</li>
     @endforeach
 </ul>

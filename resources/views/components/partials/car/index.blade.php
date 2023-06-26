@@ -1,5 +1,5 @@
 @props([
-    'car',
+    'asset',
 ])
 
 <div class="col-lg-4 col-md-6">
@@ -7,10 +7,10 @@
     <div class="rn-car-item">
         <x-partials.car.rating />
         <x-partials.car.thumbnail />
-        <x-partials.car.info :name="$car->name"
-                             :price-per-day="$car->price"
-                             :amenities="$car->amenities?->take(3)->toArray()"
-                             :short-description="$car->short_description" />
+        <x-partials.car.info :name="$asset->name"
+                             :price-per-day="$asset->price"
+                             :amenities="$asset->amenities?->take(3)->toArray()"
+                             :short-description="$asset->short_description" />
     <!-- End Car Item-->
     </div>
 </div>
