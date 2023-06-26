@@ -19,34 +19,14 @@
 
                     <!-- Main Nav Menu-->
                     <ul class="rn-navbar">
-                        <li class="active">
-                            <a href="index.html">Home</a>
+                        <li @class(['active' => request()->is('home') || request()->is('/')])>
+                            <a href="{{ route('home') }}">Home</a>
                         </li>
-                        <li>
-                            <a href="#">Cars
-                                <i class="lnr lnr-chevron-down"></i>
-                            </a>
-                            <ul>
-                                <li>
-                                    <a href="car-search.html">Car Search</a>
-                                </li>
-                            </ul>
+                        <li @class(['active' => request()->is('cars/category')])>
+                            <a href="{{ route('frontend.cars') }}">Available Cars</a>
                         </li>
-                        <li>
-                            <a href="#">Pages
-                                <i class="lnr lnr-chevron-down"></i>
-                            </a>
-                            <ul>
-                                <li>
-                                    <a href="about.html">About Us</a>
-                                </li>
-                                <li>
-                                    <a href="faq.html">FAQ</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="service.html">Service</a>
+                        <li @class(['active' => request()->is('cars/search')])>
+                            <a href="{{ route('frontend.cars.search') }}">Search</a>
                         </li>
                         <li>
                             <a href="contact.html">Contact</a>

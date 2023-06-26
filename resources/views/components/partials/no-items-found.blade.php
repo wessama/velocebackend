@@ -7,7 +7,7 @@
                 <div class="rn-404-contsiner">
                     <img class="img-fluid" src="{{ asset('assets/images/404.svg') }}" alt="">
                     <div class="rn-404-info">
-                        <h2>Opps!</h2>
+                        <h2>Oops!</h2>
                         <p>We don't have any cars matching your search at the moment. Please try again with different search criteria.
                             <a href="{{ route('home') }}">Home Page</a>
                         </p>
