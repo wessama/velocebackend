@@ -11,7 +11,6 @@ class CreateAmenitiesTable extends Migration
         Schema::create('amenities', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name')->nullable();
-            $table->string('value')->nullable();
             $table->string('icon')->nullable();
             $table->timestamps();
             $table->softDeletes();

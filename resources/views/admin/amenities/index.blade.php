@@ -29,9 +29,6 @@
                             {{ trans('cruds.amenity.fields.name') }}
                         </th>
                         <th>
-                            {{ trans('cruds.amenity.fields.value') }}
-                        </th>
-                        <th>
                             {{ trans('cruds.amenity.fields.icon') }}
                         </th>
                         <th>
@@ -50,9 +47,6 @@
                             </td>
                             <td>
                                 {{ $amenity->name ?? '' }}
-                            </td>
-                            <td>
-                                {{ $amenity->value ?? '' }}
                             </td>
                             <td>
                                 {{ $amenity->icon ?? '' }}

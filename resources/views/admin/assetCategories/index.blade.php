@@ -29,6 +29,9 @@
                             {{ trans('cruds.assetCategory.fields.name') }}
                         </th>
                         <th>
+                            {{ trans('cruds.assetCategory.fields.icon') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -44,6 +47,9 @@
                             </td>
                             <td>
                                 {{ $assetCategory->name ?? '' }}
+                            </td>
+                            <td>
+                                {{ $assetCategory->icon ?? '' }}
                             </td>
                             <td>
                                 @can('asset_category_show')
