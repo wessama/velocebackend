@@ -6,6 +6,8 @@ use App\Models\Asset;
 
 class HomeController extends Controller
 {
+    private const ITEMS_PER_PAGE = 6;
+
     /**
      * Show the application dashboard.
      *
@@ -13,8 +15,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $cars = Asset::all();
+        $cars = Asset::paginate(self::ITEMS_PER_PAGE);
 
-        return view('welcome', compact('cars'));
+        return view('welcome', [
+            'cars' => $cars,
+        ]);
     }
 }

@@ -9,7 +9,6 @@
                     <p>Inbecilloque elegans errorem concedo etsi electram.</p>
                     <span class="rn-title-bg">We've got it</span>
                 </div>
-
             </div>
         </div>
         <div class="row">

@@ -3,18 +3,15 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-
                 <!-- Section Title-->
                 <div class="rn-section-title  rn-title-bg-color-white-10 rn-title-color-white">
                     <h2 class="rn-title">Search &amp; Rent Cars</h2>
                     <span class="rn-title-bg">Search &amp; Rent Cars</span>
                 </div>
-
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12">
-
                 <!-- Main Big Search Form-->
                 <div class="rn-big-search-form rn-big-search-form-dark">
                     <form action="car-search.html">
@@ -22,13 +19,13 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div class="rn-icon-input">
                                     <i class="fas fa-map-marker-alt"></i>
-                                    <input type="text" placeholder="Pick-up Location">
+                                    <input id="pickup_location" type="text" value="" placeholder="Pick-up Location">
                                 </div>
                             </div>
                             <div class="col-lg-3 col-sm-6">
                                 <div class="rn-icon-input">
                                     <i class="fas fa-map-marker-alt"></i>
-                                    <input type="text" placeholder="Drop-off Location">
+                                    <input id="dropoff_location" type="text" value="" placeholder="Drop-off Location">
                                 </div>
                             </div>
                             <div class="col-lg-3 rn-date-time-input">
@@ -82,3 +79,19 @@
     </div>
 </section>
 <!-- End Car Search Form-->
+
+@pushOnce('footer-scripts')
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxkeDpQmIe_2RsDomkFPiVT7XfYCM_rrs&libraries=places"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Initialize autocomplete for pick-up location
+            const pickupInput = document.getElementById('pickup_location');
+            const pickupAutocomplete = new google.maps.places.Autocomplete(pickupInput);
+
+            // Initialize autocomplete for drop-off location
+            const dropoffInput = document.getElementById('dropoff_location');
+            const dropoffAutocomplete = new google.maps.places.Autocomplete(dropoffInput);
+        });
+    </script>
+@endpushOnce

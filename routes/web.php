@@ -5,6 +5,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index')->name('home');
 
+Route::group(['prefix' => 'home', 'as' => 'frontend.'], function() {
+    Route::get('cars/{category}', 'HomeController@search')->name('cars');
+
+});
+
 Route::get('/home', function () {
     if (session('status')) {
         return redirect()->route('admin.home')->with('status', session('status'));

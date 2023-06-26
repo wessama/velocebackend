@@ -38,6 +38,6 @@
     <script src="{{ asset('js/starrr.min.js') }}"></script>
     <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
     <script src="{{ asset('js/scripts.js') }}"></script>
-    @yield('footer-scripts')
+    @stack('footer-scripts')
 </body>
 </html>
