@@ -10,6 +10,6 @@
         @include('partials.frontend.slider')
         @include('partials.frontend.car-search')
         @include('partials.frontend.categories')
-        @include('partials.frontend.cars')
+        @include('partials.frontend.cars', ['cars' => $cars])
     @endif
 @endsection
