@@ -22,7 +22,7 @@
                         <li @class(['active' => request()->is('home') || request()->is('/')])>
                             <a href="{{ route('home') }}">Home</a>
                         </li>
-                        <li @class(['active' => request()->is('cars/category')])>
+                        <li @class(['active' => request()->is('cars/category*')])>
                             <a href="{{ route('frontend.cars') }}">Available Cars</a>
                         </li>
                         <li @class(['active' => request()->is('cars/search')])>

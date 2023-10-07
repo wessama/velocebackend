@@ -4,6 +4,7 @@
     <div class="container">
         <div class="row">
             @each('components.partials.car.index', $assets, 'asset')
+            <x-partials.banner />
         </div>
         <div class="row">
             <div class="col-lg-12">
