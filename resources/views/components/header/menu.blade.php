@@ -5,7 +5,7 @@
             <div class="col-12 col-md-4">
                 <!-- Logo-->
                 <a class="brand-name" href="{{ route('home') }}">
-                    <img class="img-fluid" src="{{ asset('images/logo.png') }}" alt="Logo">
+                    {{--<img class="img-fluid" src="#" alt="Logo">--}}
                 </a>
             </div>
             <div class="col-12 col-md-8">

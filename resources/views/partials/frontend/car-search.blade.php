@@ -81,7 +81,7 @@
 <!-- End Car Search Form-->
 
 @pushOnce('footer-scripts')
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxkeDpQmIe_2RsDomkFPiVT7XfYCM_rrs&libraries=places"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key={{ config('app.google_maps_api_key') }}ProvideKeyHeres&libraries=places"></script>
 
     <script>
         $(document).ready(function() {

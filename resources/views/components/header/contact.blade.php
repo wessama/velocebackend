@@ -7,7 +7,7 @@
         <div class="rn-info">
             <ul>
                 <li>&nbsp;</li>
-                <li>(971)-944-1251</li>
+                <li>(123)-456-78910</li>
                 <li>&nbsp;</li>
             </ul>
         </div>
@@ -19,7 +19,7 @@
         <div class="rn-info">
             <ul>
                 <li>&nbsp;</li>
-                <li>info@velocerental.ae</li>
+                <li>info@website.com</li>
                 <li>&nbsp;</li>
             </ul>
         </div>
@@ -30,9 +30,9 @@
         </div>
         <div class="rn-info">
             <ul>
-                <li>Al Wasl Compound - Street 69</li>
-                <li>Al Quoz Industrial Area 3 - Dubai</li>
-                <li>United Arab Emirates</li>
+                <li>Address Line 1 - Street 69</li>
+                <li>Address Line 2 - Street 70</li>
+                <li>Country</li>
             </ul>
         </div>
     </div>

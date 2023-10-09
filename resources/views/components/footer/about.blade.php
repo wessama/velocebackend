@@ -3,7 +3,7 @@
     <h2 class="rn-widget-title">About Us</h2>
     <div class="rn-widget-content">
         <a class="brand-name" href="{{ route('home') }}">
-            <img class="img-fluid" src="{{ asset('images/logo.png') }}" alt="Logo">
+            {{--<img class="img-fluid" src="" alt="Logo">--}}
         </a>
         <p>Sed sit amet ligula ac nulla finibus euismod nec nec diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent semper, risus eget ornare maximus, ipsum ante semper.</p>
         <ul class="rn-widget-social">
