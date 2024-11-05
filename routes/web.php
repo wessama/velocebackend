@@ -1,31 +1,18 @@
 <?php
 
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Route;
-
-Route::get('/', 'HomeController@index')->name('home');
-
-Route::group(['as' => 'frontend.'], function() {
-    Route::get('cars/search', 'HomeController@search')->name('cars.search');
-
-    Route::post('cars/filter', 'HomeController@filter')->name('cars.filter');
-
-    Route::get('cars/category/{assetCategory?}', 'HomeController@cars')->name('cars');
-});
-
+Route::redirect('/', '/login');
 Route::get('/home', function () {
     if (session('status')) {
         return redirect()->route('admin.home')->with('status', session('status'));
     }
 
-    return redirect()->route('home');
+    return redirect()->route('admin.home');
 });
 
 Auth::routes(['register' => false]);
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
     Route::get('/', 'HomeController@index')->name('home');
-
     // Permissions
     Route::delete('permissions/destroy', 'PermissionsController@massDestroy')->name('permissions.massDestroy');
     Route::resource('permissions', 'PermissionsController');
